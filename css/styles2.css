@@ -1,0 +1,137 @@
+﻿
+	.button {
+		background-color: transparent;
+		min-width: 8vw;
+		margin-right: 0.5vw;
+		margin-left: 0.5vw;
+		margin-top: 1.5vh;
+		margin-bottom: 2vh;
+		text-align: center;
+		border: none;
+		color: #4B0082;		/*dark blue #1566F2*/	/*dark purple #800080*/
+		font-family: Arial;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	
+	.dropdown-header {
+		color: black;
+		pointer-events: none;
+	}
+	
+	.dropdown-button:hover {
+		text-decoration: underline;
+	}
+	
+	.course-button .dropdown-button {
+		margin-top:0.5vh;
+		margin-bottom:0.5vh;
+	}
+
+	
+	
+	.all-boxes{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.unit-box{
+		border-radius:5px;
+		border: 1px #d3d3d3 solid;
+		border-top: 5px #4B0082 solid;
+		min-height:13vw;
+		display:grid;
+		grid-template-columns: 50% 50%;
+		grid-auto-columns: auto;
+		grid-auto-rows: auto;
+		grid-auto-flow: row dense;
+		overflow: hidden;
+		list-style-type: none;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		background-color: white;
+		box-shadow:10px 10px 5px #c6c6c6;
+		padding-bottom:15px;
+		font-size: 120%;
+		min-width: -webkit-fill-available;
+		max-width: 700px;
+	}
+
+	.unit-box > h5 {
+		color: #808080;
+		margin-top: 1vw;
+		margin-left:0.7vw;
+		margin-bottom: 0;
+		margin-right: 0;
+		overflow: visible;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	
+	.unit-box > h4 {
+		color: dark-gray;
+		margin-top: 0;
+		margin-left:0.7vw;
+		margin-bottom: 0;
+		margin-right: 0; 
+		overflow: visible;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+
+	.unit-button > a {
+		display:block;
+	}
+	
+	.unit-button {
+		width: 18vw;
+		text-align: left !important;
+		font-size:80%;
+	}
+	
+	.override-unit {
+		margin-bottom:0px;
+		margin-top:0px;
+	}
+	
+	
+	a { text-decoration: none; color:#4B0082;}
+	a:visited { text-decoration: none; color:#4B0082;}
+	a:hover { text-decoration: none; }
+	a:focus { text-decoration: none; }
+	a:hover, a:active { text-decoration: none; }
+	
+	body {background-color: #F4F4F4;}
+
+	.title-up {
+		align-self:center;
+		justify-content:center;
+		font-weight: 600;
+		line-height: 1.45em;
+		font-size: 1.0625rem;
+		text-transform: uppercase;
+		color: #222a42;
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+
+	.modal-header > h4 {
+		padding-right:38.5%;
+	}
+
+	#ExImg {
+		max-height:80vh;
+		max-width:100%;
+		margin:auto;
+		display:block;
+	}
+
+	.modal {
+		padding-right:0 !important;
+	}

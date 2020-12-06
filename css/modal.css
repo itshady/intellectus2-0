@@ -1,0 +1,1469 @@
+﻿.close {
+  float: right;
+  font-size: 1.3125rem;
+  font-weight: 600;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+  opacity: .5;
+}
+
+.close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.close:not(:disabled):not(.disabled):hover,
+.close:not(:disabled):not(.disabled):focus {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  opacity: .75;
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -25%);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+  }
+}
+
+.modal.show .modal-dialog {
+  transform: translate(0, 0);
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - (0.5rem * 2));
+}
+
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - (0.5rem * 2));
+  content: "";
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid rgba(34, 42, 66, 0.2);
+  border-radius: 0.2857rem;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #222a42;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0.16;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 24px 0 24px;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: 0.2857rem;
+  border-top-right-radius: 0.2857rem;
+}
+
+.modal-header .close {
+  padding: 24px 24px 0 24px;
+  margin: -24px 24px 0 24px -24px 24px 0 24px -24px 24px 0 24px auto;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 24px 24px 16px 24px;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 24px 24px 16px 24px;
+  border-top: 1px solid #e9ecef;
+}
+
+.modal-footer> :not(:first-child) {
+  margin-left: .25rem;
+}
+
+.modal-footer> :not(:last-child) {
+  margin-right: .25rem;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+  .modal-dialog-centered {
+    min-height: calc(100% - (1.75rem * 2));
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - (1.75rem * 2));
+  }
+  .modal-content {
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
+  }
+  .modal-sm {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 800px;
+  }
+}
+
+.modal-content {
+  border: 0;
+}
+
+.modal-content .modal-header {
+  border-bottom: none;
+}
+
+.modal-content .modal-header button {
+  position: absolute;
+  right: 27px;
+  top: 24px;
+  outline: 0;
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-content .modal-header .title {
+  color: #222a42;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.modal-content .modal-header .modal-title {
+  color: #222a42;
+}
+
+.modal-content .modal-header i.tim-icons {
+  font-size: 16px;
+}
+
+.modal-content .modal-header .modal-profile {
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5.7;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content .modal-header .modal-profile i {
+  color: #e14eca;
+  font-size: 21px;
+  margin-top: -10px;
+}
+
+.modal-content .modal-header .modal-profile[class*="modal-profile-"] i {
+  color: #ffffff;
+}
+
+.modal-content .modal-header .modal-profile.modal-profile-primary {
+  background-color: #e14eca;
+}
+
+.modal-content .modal-header .modal-profile.modal-profile-danger {
+  background-color: #fd5d93;
+}
+
+.modal-content .modal-header .modal-profile.modal-profile-warning {
+  background-color: #ff8d72;
+}
+
+.modal-content .modal-header .modal-profile.modal-profile-success {
+  background-color: #00f2c3;
+}
+
+.modal-content .modal-header .modal-profile.modal-profile-info {
+  background-color: #1d8cf8;
+}
+
+.modal-content .modal-body {
+  line-height: 1.9;
+}
+
+.modal-content .modal-body p {
+  color: #222a42;
+  font-weight: 300;
+  margin-top: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content .modal-body form .form-check {
+  padding-left: 19px;
+}
+
+.modal-content .modal-body form .form-check .form-check-label {
+  padding-left: 35px;
+}
+
+.modal-content .modal-body img {
+  padding: 10px;
+}
+
+.modal-content .modal-footer {
+  border-top: 0;
+  -webkit-justify-content: flex-end;
+  /* Safari 6.1+ */
+  justify-content: flex-end;   /*space-between*/
+}
+
+.modal-content .modal-footer button {
+  margin: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: auto;
+}
+
+.modal-content .modal-footer button.pull-left {
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  left: -5px;
+}
+
+.modal-content .modal-body+.modal-footer {
+  padding-top: 0;
+}
+
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal.modal-default .modal-content {
+  background-color: #ffffff;
+  color: #222a42;
+}
+
+.modal.modal-default .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-default .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-default .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-default .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-default .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-default .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-default .form-control:focus {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal.modal-default .has-success:after,
+.modal.modal-default .has-danger:after {
+  color: #ffffff;
+}
+
+.modal.modal-default .has-danger .form-control {
+  background-color: transparent;
+}
+
+.modal.modal-default .input-group-prepend {
+  margin-right: 0;
+}
+
+.modal.modal-default .input-group-prepend .input-group-text,
+.modal.modal-default .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-default .input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-default .input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.modal.modal-default .form-group.no-border .form-control,
+.modal.modal-default .input-group.no-border .form-control {
+  background-color: rgba(23, 25, 65, 0.2);
+  color: #ffffff;
+}
+
+.modal.modal-default .form-group.no-border .form-control:focus,
+.modal.modal-default .form-group.no-border .form-control:active,
+.modal.modal-default .form-group.no-border .form-control:active,
+.modal.modal-default .input-group.no-border .form-control:focus,
+.modal.modal-default .input-group.no-border .form-control:active,
+.modal.modal-default .input-group.no-border .form-control:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-default .form-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-default .form-group.no-border .form-control+.input-group-append .input-group-text,
+.modal.modal-default .input-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-default .input-group.no-border .form-control+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+}
+
+.modal.modal-default .form-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-default .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-default .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-default .form-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-default .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-default .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-default .input-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-default .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-default .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-default .input-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-default .input-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-default .input-group.no-border .form-control+.input-group-append .input-group-text:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-default .form-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-default .form-group.no-border .form-control:focus+.input-group-append .input-group-text,
+.modal.modal-default .input-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-default .input-group.no-border .form-control:focus+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-default .form-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-default .form-group.no-border .input-group-append .input-group-text,
+.modal.modal-default .input-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-default .input-group.no-border .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border: none;
+  color: #ffffff;
+}
+
+.modal.modal-default .form-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-default .form-group.no-border.input-group-focus .input-group-append .input-group-text,
+.modal.modal-default .input-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-default .input-group.no-border.input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-primary .modal-content {
+  background-color: #e14eca;
+  color: #ffffff;
+}
+
+.modal.modal-primary .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-primary .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-primary .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-primary .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-primary .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-primary .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-control:focus {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal.modal-primary .has-success:after,
+.modal.modal-primary .has-danger:after {
+  color: #ffffff;
+}
+
+.modal.modal-primary .has-danger .form-control {
+  background-color: transparent;
+}
+
+.modal.modal-primary .input-group-prepend {
+  margin-right: 0;
+}
+
+.modal.modal-primary .input-group-prepend .input-group-text,
+.modal.modal-primary .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-primary .input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-primary .input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-group.no-border .form-control,
+.modal.modal-primary .input-group.no-border .form-control {
+  background-color: rgba(23, 25, 65, 0.2);
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-group.no-border .form-control:focus,
+.modal.modal-primary .form-group.no-border .form-control:active,
+.modal.modal-primary .form-group.no-border .form-control:active,
+.modal.modal-primary .input-group.no-border .form-control:focus,
+.modal.modal-primary .input-group.no-border .form-control:active,
+.modal.modal-primary .input-group.no-border .form-control:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-primary .form-group.no-border .form-control+.input-group-append .input-group-text,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+}
+
+.modal.modal-primary .form-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-primary .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-primary .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-primary .form-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-primary .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-primary .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-primary .input-group.no-border .form-control+.input-group-append .input-group-text:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-primary .form-group.no-border .form-control:focus+.input-group-append .input-group-text,
+.modal.modal-primary .input-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-primary .input-group.no-border .form-control:focus+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-primary .form-group.no-border .input-group-append .input-group-text,
+.modal.modal-primary .input-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-primary .input-group.no-border .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border: none;
+  color: #ffffff;
+}
+
+.modal.modal-primary .form-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-primary .form-group.no-border.input-group-focus .input-group-append .input-group-text,
+.modal.modal-primary .input-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-primary .input-group.no-border.input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-danger .modal-content {
+  background-color: #fd5d93;
+  color: #ffffff;
+}
+
+.modal.modal-danger .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-danger .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-danger .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-danger .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-danger .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-danger .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-control:focus {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal.modal-danger .has-success:after,
+.modal.modal-danger .has-danger:after {
+  color: #ffffff;
+}
+
+.modal.modal-danger .has-danger .form-control {
+  background-color: transparent;
+}
+
+.modal.modal-danger .input-group-prepend {
+  margin-right: 0;
+}
+
+.modal.modal-danger .input-group-prepend .input-group-text,
+.modal.modal-danger .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-danger .input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-danger .input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-group.no-border .form-control,
+.modal.modal-danger .input-group.no-border .form-control {
+  background-color: rgba(23, 25, 65, 0.2);
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-group.no-border .form-control:focus,
+.modal.modal-danger .form-group.no-border .form-control:active,
+.modal.modal-danger .form-group.no-border .form-control:active,
+.modal.modal-danger .input-group.no-border .form-control:focus,
+.modal.modal-danger .input-group.no-border .form-control:active,
+.modal.modal-danger .input-group.no-border .form-control:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-danger .form-group.no-border .form-control+.input-group-append .input-group-text,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+}
+
+.modal.modal-danger .form-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-danger .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-danger .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-danger .form-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-danger .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-danger .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-danger .input-group.no-border .form-control+.input-group-append .input-group-text:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-danger .form-group.no-border .form-control:focus+.input-group-append .input-group-text,
+.modal.modal-danger .input-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-danger .input-group.no-border .form-control:focus+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-danger .form-group.no-border .input-group-append .input-group-text,
+.modal.modal-danger .input-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-danger .input-group.no-border .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border: none;
+  color: #ffffff;
+}
+
+.modal.modal-danger .form-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-danger .form-group.no-border.input-group-focus .input-group-append .input-group-text,
+.modal.modal-danger .input-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-danger .input-group.no-border.input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-warning .modal-content {
+  background-color: #ff8d72;
+  color: #ffffff;
+}
+
+.modal.modal-warning .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-warning .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-warning .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-warning .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-warning .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-warning .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-control:focus {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal.modal-warning .has-success:after,
+.modal.modal-warning .has-danger:after {
+  color: #ffffff;
+}
+
+.modal.modal-warning .has-danger .form-control {
+  background-color: transparent;
+}
+
+.modal.modal-warning .input-group-prepend {
+  margin-right: 0;
+}
+
+.modal.modal-warning .input-group-prepend .input-group-text,
+.modal.modal-warning .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-warning .input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-warning .input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-group.no-border .form-control,
+.modal.modal-warning .input-group.no-border .form-control {
+  background-color: rgba(23, 25, 65, 0.2);
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-group.no-border .form-control:focus,
+.modal.modal-warning .form-group.no-border .form-control:active,
+.modal.modal-warning .form-group.no-border .form-control:active,
+.modal.modal-warning .input-group.no-border .form-control:focus,
+.modal.modal-warning .input-group.no-border .form-control:active,
+.modal.modal-warning .input-group.no-border .form-control:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-warning .form-group.no-border .form-control+.input-group-append .input-group-text,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+}
+
+.modal.modal-warning .form-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-warning .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-warning .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-warning .form-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-warning .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-warning .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-warning .input-group.no-border .form-control+.input-group-append .input-group-text:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-warning .form-group.no-border .form-control:focus+.input-group-append .input-group-text,
+.modal.modal-warning .input-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-warning .input-group.no-border .form-control:focus+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-warning .form-group.no-border .input-group-append .input-group-text,
+.modal.modal-warning .input-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-warning .input-group.no-border .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border: none;
+  color: #ffffff;
+}
+
+.modal.modal-warning .form-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-warning .form-group.no-border.input-group-focus .input-group-append .input-group-text,
+.modal.modal-warning .input-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-warning .input-group.no-border.input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-success .modal-content {
+  background-color: #00f2c3;
+  color: #ffffff;
+}
+
+.modal.modal-success .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-success .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-success .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-success .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-success .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-success .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-success .form-control:focus {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal.modal-success .has-success:after,
+.modal.modal-success .has-danger:after {
+  color: #ffffff;
+}
+
+.modal.modal-success .has-danger .form-control {
+  background-color: transparent;
+}
+
+.modal.modal-success .input-group-prepend {
+  margin-right: 0;
+}
+
+.modal.modal-success .input-group-prepend .input-group-text,
+.modal.modal-success .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-success .input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-success .input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.modal.modal-success .form-group.no-border .form-control,
+.modal.modal-success .input-group.no-border .form-control {
+  background-color: rgba(23, 25, 65, 0.2);
+  color: #ffffff;
+}
+
+.modal.modal-success .form-group.no-border .form-control:focus,
+.modal.modal-success .form-group.no-border .form-control:active,
+.modal.modal-success .form-group.no-border .form-control:active,
+.modal.modal-success .input-group.no-border .form-control:focus,
+.modal.modal-success .input-group.no-border .form-control:active,
+.modal.modal-success .input-group.no-border .form-control:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-success .form-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-success .form-group.no-border .form-control+.input-group-append .input-group-text,
+.modal.modal-success .input-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-success .input-group.no-border .form-control+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+}
+
+.modal.modal-success .form-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-success .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-success .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-success .form-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-success .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-success .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-success .input-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-success .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-success .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-success .input-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-success .input-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-success .input-group.no-border .form-control+.input-group-append .input-group-text:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-success .form-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-success .form-group.no-border .form-control:focus+.input-group-append .input-group-text,
+.modal.modal-success .input-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-success .input-group.no-border .form-control:focus+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-success .form-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-success .form-group.no-border .input-group-append .input-group-text,
+.modal.modal-success .input-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-success .input-group.no-border .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border: none;
+  color: #ffffff;
+}
+
+.modal.modal-success .form-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-success .form-group.no-border.input-group-focus .input-group-append .input-group-text,
+.modal.modal-success .input-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-success .input-group.no-border.input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-info .modal-content {
+  background-color: #1d8cf8;
+  color: #ffffff;
+}
+
+.modal.modal-info .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-info .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-info .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-info .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-info .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.modal.modal-info .form-control {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-info .form-control:focus {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.modal.modal-info .has-success:after,
+.modal.modal-info .has-danger:after {
+  color: #ffffff;
+}
+
+.modal.modal-info .has-danger .form-control {
+  background-color: transparent;
+}
+
+.modal.modal-info .input-group-prepend {
+  margin-right: 0;
+}
+
+.modal.modal-info .input-group-prepend .input-group-text,
+.modal.modal-info .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.modal.modal-info .input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-info .input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.modal.modal-info .form-group.no-border .form-control,
+.modal.modal-info .input-group.no-border .form-control {
+  background-color: rgba(23, 25, 65, 0.2);
+  color: #ffffff;
+}
+
+.modal.modal-info .form-group.no-border .form-control:focus,
+.modal.modal-info .form-group.no-border .form-control:active,
+.modal.modal-info .form-group.no-border .form-control:active,
+.modal.modal-info .input-group.no-border .form-control:focus,
+.modal.modal-info .input-group.no-border .form-control:active,
+.modal.modal-info .input-group.no-border .form-control:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-info .form-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-info .form-group.no-border .form-control+.input-group-append .input-group-text,
+.modal.modal-info .input-group.no-border .form-control+.input-group-prepend .input-group-text,
+.modal.modal-info .input-group.no-border .form-control+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+}
+
+.modal.modal-info .form-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-info .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-info .form-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-info .form-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-info .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-info .form-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-info .input-group.no-border .form-control+.input-group-prepend .input-group-text:focus,
+.modal.modal-info .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-info .input-group.no-border .form-control+.input-group-prepend .input-group-text:active,
+.modal.modal-info .input-group.no-border .form-control+.input-group-append .input-group-text:focus,
+.modal.modal-info .input-group.no-border .form-control+.input-group-append .input-group-text:active,
+.modal.modal-info .input-group.no-border .form-control+.input-group-append .input-group-text:active {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-info .form-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-info .form-group.no-border .form-control:focus+.input-group-append .input-group-text,
+.modal.modal-info .input-group.no-border .form-control:focus+.input-group-prepend .input-group-text,
+.modal.modal-info .input-group.no-border .form-control:focus+.input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal.modal-info .form-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-info .form-group.no-border .input-group-append .input-group-text,
+.modal.modal-info .input-group.no-border .input-group-prepend .input-group-text,
+.modal.modal-info .input-group.no-border .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.2);
+  border: none;
+  color: #ffffff;
+}
+
+.modal.modal-info .form-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-info .form-group.no-border.input-group-focus .input-group-append .input-group-text,
+.modal.modal-info .input-group.no-border.input-group-focus .input-group-prepend .input-group-text,
+.modal.modal-info .input-group.no-border.input-group-focus .input-group-append .input-group-text {
+  background-color: rgba(23, 25, 65, 0.3);
+  color: #ffffff;
+}
+
+.modal .modal-header .close {
+  color: #fd5d93;
+  text-shadow: none;
+}
+
+.modal .modal-header .close:hover,
+.modal .modal-header .close:focus {
+  opacity: 1;
+}
+
+.modal.modal-mini p {
+  text-align: center;
+}
+
+.modal.modal-mini .modal-dialog {
+  max-width: 255px;
+  margin: 0 auto;
+}
+
+.modal.modal-mini.show .modal-dialog {
+  -webkit-transform: translate(0, 30%);
+  -o-transform: translate(0, 30%);
+  transform: translate(0, 30%);
+}
+
+.modal.modal-mini .modal-footer button {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.modal.modal-mini .modal-footer button:first-child {
+  opacity: .5;
+}
+
+.modal.modal-black .modal-content {
+  background: #1f2251;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-black .modal-content .modal-header .modal-title,
+.modal.modal-black .modal-content .modal-header .title {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.modal.modal-black .modal-content .modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal.modal-black h1,
+.modal.modal-black h2,
+.modal.modal-black h3,
+.modal.modal-black h4,
+.modal.modal-black h5,
+.modal.modal-black h6,
+.modal.modal-black p {
+  color: #ffffff;
+}
+
+.modal-search .modal-dialog {
+  margin: 20px auto;
+  max-width: 650px;
+}
+
+.modal-search .modal-dialog input {
+  border: none;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+.modal-search .modal-dialog span {
+  font-size: 35px;
+  color: #b7b7b7;
+}
+
+.modal-search .modal-content .modal-header {
+  padding: 24px;
+}
+
+.modal-search .modal-header .close {
+  color: #555555;
+  top: 30px !important;
+}
+
+.modal-search .modal-footer {
+  border-top: 2px solid #f9f9f9;
+  margin: 0px 25px 20px;
+}
+
+.modal.show .modal-dialog {
+  -webkit-transform: translate(0, 30%);
+  transform: translate(0, 30%);
+}
+
+.rtl .modal-search .modal-header .close {
+  margin-right: auto;
+  left: 10px;
+}
+
+.modal-search .modal-dialog {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.modal-search .modal-dialog .form-control {
+  border: none;
+  color: #222a42;
+}
+
+.modal-search .modal-dialog .form-control::placeholder {
+  color: #222a42;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.modal-search .modal-header .close {
+  color: #555555;
+  top: 30px !important;
+}
+
+.rtl .modal-search .modal-header .close {
+  margin-right: auto;
+  left: 10px;
+}
+
+.btn-default {
+  color: #ffffff;
+  background-color: #344675;
+  border-color: #344675;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-default:hover {
+  color: #ffffff;
+  background-color: #28365b;
+  border-color: #243152;
+}
+
+.btn-default:focus,
+.btn-default.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(52, 70, 117, 0.5);
+}
+
+.btn-default.disabled,
+.btn-default:disabled {
+  color: #ffffff;
+  background-color: #344675;
+  border-color: #344675;
+}
+
+.btn-default:not(:disabled):not(.disabled):active,
+.btn-default:not(:disabled):not(.disabled).active,
+.show>.btn-default.dropdown-toggle {
+  color: #ffffff;
+  background-color: #243152;
+  border-color: #202c49;
+}
+
+.btn-default:not(:disabled):not(.disabled):active:focus,
+.btn-default:not(:disabled):not(.disabled).active:focus,
+.show>.btn-default.dropdown-toggle:focus {
+  box-shadow: none, 0 0 0 0 rgba(52, 70, 117, 0.5);
+}
+
+.btn-danger {
+  background: #fd5d93;
+  background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+  background-image: -o-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+  background-image: -moz-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+  background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+  background-size: 210% 210%;
+  background-position: top right;
+  background-color: #fd5d93;
+  transition: all 0.15s ease;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.btn-danger.animation-on-hover:hover {
+  background-position: bottom left;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger:active:focus,
+.btn-danger:active:hover,
+.btn-danger.active:focus,
+.btn-danger.active:hover {
+  background-color: #ec250d !important;
+  background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-image: -o-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-image: -moz-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.btn-danger:active {
+  box-shadow: none !important;
+  transform: translateY(1px) !important;
+  transition: all .15s ease;
+}
+
+.btn-danger:not([data-action]):hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+}
+
+.btn-danger.disabled,
+.btn-danger.disabled:hover,
+.btn-danger.disabled:focus,
+.btn-danger.disabled.focus,
+.btn-danger.disabled:active,
+.btn-danger.disabled.active,
+.btn-danger:disabled,
+.btn-danger:disabled:hover,
+.btn-danger:disabled:focus,
+.btn-danger:disabled.focus,
+.btn-danger:disabled:active,
+.btn-danger:disabled.active,
+.btn-danger[disabled],
+.btn-danger[disabled]:hover,
+.btn-danger[disabled]:focus,
+.btn-danger[disabled].focus,
+.btn-danger[disabled]:active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger,
+fieldset[disabled] .btn-danger:hover,
+fieldset[disabled] .btn-danger:focus,
+fieldset[disabled] .btn-danger.focus,
+fieldset[disabled] .btn-danger:active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #fd5d93;
+  border-color: #fd5d93;
+}
+
+.btn-danger.btn-simple {
+  color: #fd5d93;
+  border-color: #fd5d93;
+  background: transparent;
+}
+
+.btn-danger.btn-simple:hover,
+.btn-danger.btn-simple:focus,
+.btn-danger.btn-simple:active,
+.btn-danger.btn-simple:not(:disabled):not(.disabled):active {
+  color: #fd5d93;
+  border-color: #fd5d93;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none;
+}
+
+.btn-danger.btn-simple.active {
+  border-color: #fd5d93 !important;
+}
+
+.btn-danger.btn-simple.active:hover,
+.btn-danger.btn-simple.active:focus,
+.btn-danger.btn-simple.active:active,
+.btn-danger.btn-simple.active:not(:disabled):not(.disabled):active {
+  color: #ffffff;
+  border-color: #fd5d93;
+  background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-image: -o-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-image: -moz-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+  background-color: #ec250d !important;
+  box-shadow: none;
+}
+
+.btn-danger.btn-link {
+  color: #fd5d93;
+}
+
+.btn-danger.btn-link:hover,
+.btn-danger.btn-link:focus,
+.btn-danger.btn-link:active {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.btn-danger {
+  color: #ffffff;
+  background-color: #fd5d93;
+  border-color: #fd5d93;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-danger:hover {
+  color: #ffffff;
+  background-color: #fd377a;
+  border-color: #fc2b71;
+}
+
+.btn-danger:focus,
+.btn-danger.focus {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(253, 93, 147, 0.5);
+}
+
+.btn-danger.disabled,
+.btn-danger:disabled {
+  color: #ffffff;
+  background-color: #fd5d93;
+  border-color: #fd5d93;
+}
+
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:not(:disabled):not(.disabled).active,
+.show>.btn-danger.dropdown-toggle {
+  color: #ffffff;
+  background-color: #fc2b71;
+  border-color: #fc1e69;
+}
+
+.btn-danger:not(:disabled):not(.disabled):active:focus,
+.btn-danger:not(:disabled):not(.disabled).active:focus,
+.show>.btn-danger.dropdown-toggle:focus {
+  box-shadow: none, 0 0 0 0 rgba(253, 93, 147, 0.5);
+}
+
+.btn {
+    border-width: 2px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.4285rem;
+}
+
+.title.title-up {
+    text-transform: uppercase;
+}
+
+.title {
+    font-weight: 600;
+    line-height: 1.45em;
+    font-size: 1.0625rem;
+}
