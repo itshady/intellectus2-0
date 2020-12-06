@@ -22,8 +22,9 @@ $(document).ready(function () {
             //console.log(location.exists());
         //console.log(foldername);
         //console.log(subfoldername);
-
-        document.getElementById("submodal-video").remove();
+        if( $('#submodal-video').length ) {
+            document.getElementById("submodal-video").remove();
+        }
         $("#ExImg").css("display", "block");
 
         document.getElementById("title-up").innerHTML = btnname;
