@@ -23,9 +23,6 @@ $(document).ready(function () {
             //console.log(location.exists());
         //console.log(foldername);
         //console.log(subfoldername);
-        if( $('#ExVideo').length ) {
-            document.getElementById("submodal-video").remove();
-        }
         $("#ExImg").css("display", "block");
 
         document.getElementById("title-up").innerHTML = btnname;
