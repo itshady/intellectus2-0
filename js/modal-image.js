@@ -15,14 +15,15 @@ $(document).ready(function () {
         //if ('./images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpg' == true){
             //document.getElementById("ExImg").src = locationjpg;
             //document.getElementById("submodal-video").src = locationmp4;
-            
-            
+
+
+        //document.getElementById("#ExVideo").src = "https://www.youtube.com/embed/tgbNymZ7vqY";
 
         //}
             //console.log(location.exists());
         //console.log(foldername);
         //console.log(subfoldername);
-        if( $('#submodal-video').length ) {
+        if( $('#ExVideo').length ) {
             document.getElementById("submodal-video").remove();
         }
         $("#ExImg").css("display", "block");
@@ -50,9 +51,9 @@ $(document).ready(function () {
                                 $.get(locationmp4)
                                     .done(function() { 
                                         // exists code 
-                                        $("#modal-video").css("display", "none");
-                                        $("#modal-video").css("display", "");
-                                        $('#modal-video').append('<source id="submodal-video"' + locationmp4 + 'type="video/mp4">')
+                                        $("#ExVideo").css("display", "none");
+                                        $("#ExVideo").css("display", "");
+                                        document.getElementById("#ExVideo").src = "https://www.youtube.com/embed/tgbNymZ7vqY";
                                     }).fail(function() { 
                                         // not exists code
 
