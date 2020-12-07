@@ -24,6 +24,7 @@ $(document).ready(function () {
         //console.log(foldername);
         //console.log(subfoldername);
         $("#ExImg").css("display", "block");
+        $("#ExVideo").css("display", "none");
 
         document.getElementById("title-up").innerHTML = btnname;
         
@@ -48,7 +49,7 @@ $(document).ready(function () {
                                 $.get(locationmp4)
                                     .done(function() { 
                                         // exists code 
-                                        $("#ExVideo").css("display", "none");
+                                        $("#ExImg").css("display", "none");
                                         $("#ExVideo").css("display", "");
                                         document.getElementById("#ExVideo").src = "https://www.youtube.com/embed/tgbNymZ7vqY";
                                     }).fail(function() { 
