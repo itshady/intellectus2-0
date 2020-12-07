@@ -46,16 +46,9 @@ $(document).ready(function () {
                                 document.getElementById("ExImg").src = locationpng;
                             }).fail(function() { 
                                 // not exists code
-                                $.get(locationmp4)
-                                    .done(function() { 
-                                        // exists code 
-                                        $("#ExImg").css("display", "none");
-                                        $("#ExVideo").css("display", "");
-                                        document.getElementById("#ExVideo").src = "https://www.youtube.com/embed/tgbNymZ7vqY";
-                                    }).fail(function() { 
-                                        // not exists code
-
-                                    })
+                                $("#ExImg").css("display", "none");
+                                $("#ExVideo").css("display", "");
+                                document.getElementById("#ExVideo").src = "https://www.youtube.com/embed/tgbNymZ7vqY";
                             })
                     })
             })
