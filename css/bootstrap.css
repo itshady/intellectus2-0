@@ -5732,14 +5732,16 @@ a.close.disabled {
   z-index: 1050;
   display: none;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   outline: 0;
+  margin-bottom:5vh;
 }
 
 .modal-dialog {
   position: relative;
-  width: auto;
+  max-width: fit-content;
+
   margin: 0.5rem;
   pointer-events: none;
 }
@@ -5906,9 +5908,13 @@ a.close.disabled {
   overflow: scroll;
 }
 
+.modal-dialog {
+  margin: 1.75rem auto;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+   
     margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {

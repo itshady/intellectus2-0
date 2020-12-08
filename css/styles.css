@@ -974,9 +974,29 @@ input[type='checkbox'] {
 /*************************/
 /*     08. Details 1     */
 /*************************/
-.accordion .area-1 {
+#details3{
+	display:none;
+}
+
+@media (max-width: 992px) {
+	#details2{
+		display:none;
+	}
+	#details3{
+		display:block;
+	}
+}
+
+
+#area-1 {
 	height: 27rem;
-	background: url('../images/mrp.png') center center no-repeat;
+	background: url('../images/Hady.jpg') center top no-repeat;
+	background-size: cover;
+}
+
+#area-2 {
+	height: 27rem;
+	background: url('../images/Abdullah.jpg') center top no-repeat;
 	background-size: cover;
 }
 
