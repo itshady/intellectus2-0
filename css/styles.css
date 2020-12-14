@@ -978,16 +978,6 @@ input[type='checkbox'] {
 	display:none;
 }
 
-@media (max-width: 992px) {
-	#details2{
-		display:none;
-	}
-	#details3{
-		display:block;
-	}
-}
-
-
 #area-1 {
 	height: 27rem;
 	background: url('../images/Hady.jpg') center top no-repeat;
@@ -996,8 +986,32 @@ input[type='checkbox'] {
 
 #area-2 {
 	height: 27rem;
-	background: url('../images/Abdullah.jpg') center top no-repeat;
+	background: url('../images/Abdullah2.jpg') center top no-repeat;
 	background-size: cover;
+}
+
+@media (max-width: 991px) {
+	#details2{
+		display:none;
+	}
+	#details3{
+		display:block;
+	}
+	#area-1 {
+		background-size:120%;
+	}
+	#area-2 {
+		background-size:120%;
+	}
+}
+
+@media (max-width: 615px) {
+	#area-1 {
+		background-size:170%;
+	}
+	#area-2 {
+		background-size:170%;
+	}
 }
 
 .accordion .accordion-container {
