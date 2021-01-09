@@ -12,14 +12,13 @@ $(document).ready(function () {
         var subfoldername = $('.col-md-12 > h1').text();
         var locationjpg = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpg';
         var locationjpeg = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpeg';
-        var locationpng = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.PNG';
+        var locationpng1 = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.png';
+        var locationpng2 = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.PNG';
         var locationmp4 = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.mp4';
         //if (btnname+'jpeg') {
             //$('.modal-body').append('<img id="ExImg" alt="Content to come soon..." src="./images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpg" />')
         //}
         //if ('./images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpg' == true){
-            //document.getElementById("ExImg").src = locationjpg;
-            //document.getElementById("submodal-video").src = locationmp4;
 
             document.getElementById("ExImg").src = locationjpg;
 
@@ -37,12 +36,18 @@ $(document).ready(function () {
                         document.getElementById("ExImg").src = locationjpeg;
                     }).fail(function() { 
                         // not exists code
-                        $.get(locationpng)
+                        $.get(locationpng1)
                             .done(function() { 
                                 // exists code 
-                                document.getElementById("ExImg").src = locationpng;
+                                document.getElementById("ExImg").src = locationpng1;
                             }).fail(function() { 
+                                $.get(locationpng2)
+                                    .done(function() { 
+                                        // exists code 
+                                        document.getElementById("ExImg").src = locationpng2;
+                                    }).fail(function() { 
 
+                                    })
                             })
                     })
             })
