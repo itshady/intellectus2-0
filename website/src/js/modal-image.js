@@ -12,7 +12,7 @@ $(document).ready(function () {
         var subfoldername = $('.col-md-12 > h1').text();
         var locationjpg = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpg';
         var locationjpeg = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpeg';
-        var locationpng = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.png';
+        var locationpng = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.PNG';
         var locationmp4 = '../images/' + foldername + '/' + subfoldername + '/' + btnname + '.mp4';
         //if (btnname+'jpeg') {
             //$('.modal-body').append('<img id="ExImg" alt="Content to come soon..." src="./images/' + foldername + '/' + subfoldername + '/' + btnname + '.jpg" />')
