@@ -178,10 +178,6 @@
 		margin-bottom: 0;
 	}
 
-	.modal-header > h4 {
-		padding-right:38.5%;
-	}
-
 	#ExImg {
 		max-height:80vh;
 		max-width:100%;
@@ -191,4 +187,13 @@
 
 	.modal {
 		padding-right:0 !important;
+	}
+
+	.modal-header > h4 {
+		margin: auto;
+	}
+
+	.modal-header {
+		display: block;
+		margin: auto;
 	}
