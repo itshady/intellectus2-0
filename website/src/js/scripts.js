@@ -360,3 +360,7 @@
 	});
 
 })(jQuery);
+
+$( document ).ready(function() {
+    $('.copyright > .container > .row > .col-lg-12').append('<p class="p-small">Template by Inovatik</p>');
+});
